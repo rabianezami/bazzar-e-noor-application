@@ -10,7 +10,7 @@ const productsSlice = createSlice({
     name: "products",
     initialState: {
         items: [],
-        status: idle, // Idle, loading, succeed, Faliled
+        status: "idle", // Idle, loading, succeed, Faliled
         error: null,
         category: "all",
         query: "",
@@ -37,10 +37,10 @@ const productsSlice = createSlice({
             state.error= null
         })
         .addCase(fetchProducts.fulfilled, (state, action) =>{
-            state.status = " successded"
+            state.status = "succeeded"
             state.items = action.payload
         })
-        addCase(fetchProducts.rejected, (state, action) =>{
+        .addCase(fetchProducts.rejected, (state, action) =>{
             state.status = "failed"
             state.error = action.error?.message || "Something went wrong"
         })
