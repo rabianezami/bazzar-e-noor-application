@@ -3,6 +3,8 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchProducts} from "./features/products/productsSlice"
 import Navbar from "./components/Navbar"
+import CategoryFilter from './components/CategoryFilter'
+import Toolbar from './components/Toolbar'
 
 function App() {
  const dispatch = useDispatch()
@@ -15,6 +17,8 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <Navbar />
+      <CategoryFilter />
+      <Toolbar />
     </div>
   )
 }
