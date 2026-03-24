@@ -4,12 +4,12 @@ import { fetchProducts } from "./features/products/productsSlice";
 import Container from "./components/Container";
 import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
-// import CartDrawer from "./components/CartDrawer";
+import CartDrawer from "./components/CartDrawer";
 
 export default function App() {
   const dispatch = useDispatch();
   const status = useSelector((s) => s.products.status);
-  // const [cartOpen, setCartOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
 
   useEffect(() => {
     if (status === "idle") dispatch(fetchProducts());
@@ -44,7 +44,7 @@ export default function App() {
         </Container>
       </footer>
 
-      {/* <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} /> */}
+      <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />
     </div>
   );
 }
