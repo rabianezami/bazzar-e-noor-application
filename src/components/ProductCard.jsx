@@ -7,7 +7,7 @@ function clamp(text, n = 90) {
 }
 
 export default function ProductCard({ product }) {
-    const dispatch = useDispatch
+    const dispatch = useDispatch()
 
     return (
         <article className="card overflow-hidden">
@@ -31,7 +31,7 @@ export default function ProductCard({ product }) {
                 </div>
 
                 <p className="mt-2 text-xs font-medium text-slate-600">
-                    (clamp(product.description, 110))
+                    {clamp(product.description, 110)}
                 </p>
 
                 <div className="mt-4 flex items-center justify-between">
