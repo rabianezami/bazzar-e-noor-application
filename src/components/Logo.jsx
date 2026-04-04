@@ -3,7 +3,7 @@ export default function Logo() {
         <div className="flex items-center gap-2 select-none">
             <div className="grid h-9 w-9 place-items-center overflow-hidden rounded-2xl bg-slate-900 text-white shadow-sm">
                 <img 
-                  src="../..logo.png"
+                  src="/logo.png"
                   alt="Bazaar-e-Noor logo"
                   className="h-full w-full object-cover"
                   draggable="false"
